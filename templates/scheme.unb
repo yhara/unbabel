@@ -1,0 +1,9 @@
+name:Scheme
+comment:;
+command:gosh
+argtype:sexp
+stub:
+<FUNCTION_DEFINITION>
+
+(define (main args)
+  (write (<FUNCTION_NAME> <ARGUMENTS>)))

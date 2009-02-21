@@ -1,0 +1,8 @@
+name:Perl
+comment:#
+command:perl
+argtype:paren
+stub:
+<FUNCTION_DEFINITION>
+
+print <FUNCTION_NAME>(<ARGUMENTS>), "\n";

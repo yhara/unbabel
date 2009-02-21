@@ -1,0 +1,8 @@
+name:Python
+comment:#
+command:python
+argtype:square
+stub:
+<FUNCTION_DEFINITION>
+
+print <FUNCTION_NAME>(<ARGUMENTS>)

@@ -1,0 +1,22 @@
+name:Ruby19
+comment:#
+command:ruby-1.9.0-2
+argtype:square
+stub:
+<FUNCTION_DEFINITION>
+
+class Babel
+  def self.to_sexp(x)
+    case x
+    when Numeric
+      x.to_s
+    when String
+      x.inspect
+    when Array
+      '(' + x.map{|item| Babel.to_sexp(item)}.join(' ') + ')'
+    else
+      raise
+    end
+  end
+end
+print Babel.to_sexp(<FUNCTION_NAME>(<ARGUMENTS>))

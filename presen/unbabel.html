@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>Unbabel</title>
+  <style>
+  body{
+    font-size:30px
+  }
+  button{
+    margin: 0px;
+  }
+  h1{ 
+    padding: 10px;
+    margin: 10px;
+    font-size:40px; 
+    border-bottom: 15px solid lightblue;
+  }
+  ul{ 
+    margin-left: 50px;
+  }
+  div#menu{ margin:0px; padding:0px; }
+  div#presen{
+    margin:0px; 
+    padding:0px; 
+  }
+  span#num{
+    color: blue;
+    text-decoration: underline;
+    cursor:pointer;
+  }
+  div#repl{
+    position: absolute;
+    top: 70%;
+    width: 90%;
+    background: white;
+  }
+  div#repl input{
+    width: 100% 
+  }
+  input#repl-src{ font-size: 30px; }
+  div#repl-dst{ font-size: 30px; }
+  div.english{
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  pre {
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 0.5em;
+  }
+
+  .terminal_like {
+     background: black;
+     color: white;
+     padding: 0.5em;
+  }
+  strong {
+    color: red;
+    font-weight: normal;
+  }
+  kbd {
+    color: yellow;
+  }
+  /* langs */
+  .asm { color: brown; }
+  .haskell { color: blue; }
+  .ruby { color: red; }
+  .perl { color: magenta; }
+  .python { color: #0f0; }
+  .scheme { color: green; }
+  .c-lang { color: orange; }
+  </style>
+</head>
+<body id="body">
+
+<div align="right" id="menu" style="float:right;">
+  <button id="head">≪</button><button id="back">←</button><button id="num">0</button><button id="next">→</button><button id="last">≫</button><button id="repl-toggle">★</button>
+</div>
+<div id="presen"></div>
+
+<div id="repl" style="display:none;">
+    <input value="(+ 1 2 3 4 5 6 7 8 9)" id="repl-src"><br>
+    <div id="repl-dst">　</div>
+    <input type="button" id="repl-eval" value="eval">
+</div>
+<div id="bs-console"></div>
+
+<script src="biwascheme/biwascheme.js">
+(load "presen.scm")
+
+;;; main
+(presen-start "data.scm")
+</script>
+
+</body>
+</html>

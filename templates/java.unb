@@ -1,0 +1,16 @@
+name:Java
+comment://
+command:runjava
+argtype:square
+stub:
+public class Babel {
+  <FUNCTION_DEFINITION>
+
+  public static Object toSexp(Object x) {
+    return x;
+  }
+      
+  public static void main(String[] args) {
+    System.out.println( toSexp(<FUNCTION_NAME>(<ARGUMENTS>)) );
+  }
+} 

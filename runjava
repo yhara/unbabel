@@ -1,0 +1,5 @@
+#!/bin/sh
+# usage: runjava /tmp/Foo.java
+cd `dirname $1`
+javac `basename $1`
+java `basename $1 .java`
